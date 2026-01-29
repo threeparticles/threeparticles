@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/threeparticles/threeparticles/refs/heads/main/logo-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/threeparticles/threeparticles/refs/heads/main/logo-light.svg">
-    <img src="./logo-light.svg" alt="threeparticles" height="40">
+    <img src="https://raw.githubusercontent.com/threeparticles/threeparticles/refs/heads/main/logo-light.svg" alt="threeparticles" height="40">
   </picture>
 </p>
 
@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@threeparticles/core"><img src="https://img.shields.io/npm/v/@threeparticles/core.svg" alt="npm version"></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@threeparticles/core.svg" alt="license"></a>
+  <a href="https://raw.githubusercontent.com/threeparticles/threeparticles/refs/heads/main/LICENSE"><img src="https://img.shields.io/npm/l/@threeparticles/core.svg" alt="license"></a>
 </p>
 
 ## Features
