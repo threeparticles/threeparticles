@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>threeparticles - Basic Example</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "../node_modules/three/build/three.webgpu.js",
+          "three/webgpu": "../node_modules/three/build/three.webgpu.js",
+          "three/tsl": "../node_modules/three/build/three.tsl.js",
+          "three/addons/": "../node_modules/three/examples/jsm/",
+          "@threeparticles/core": "../dist/threeparticles.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import * as THREE from "three/webgpu";
+      import { Inspector } from "three/addons/inspector/Inspector.js";
+      import { Particles } from "@threeparticles/core";
+
+      const renderer = new THREE.WebGPURenderer({ antialias: true });
+      renderer.setClearColor(0x000000);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.inspector = new Inspector();
+      document.body.appendChild(renderer.domElement);
+      await renderer.init();
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000,
+      );
+      camera.position.z = 5;
+
+      const particles = new Particles({
+        particles: {
+          intensity: 2,
+          count: 10000,
+          colors: [
+            [
+              { color: "cyan", stop: 0 },
+              { color: "purple", stop: 1 },
+            ],
+          ],
+        },
+        render: {
+          blendingMode: THREE.AdditiveBlending,
+        },
+        emitter: {
+          loop: true,
+          rate: 1000,
+          lifetime: [2, 4],
+          speed: [0.5, 1],
+          size: [0.05, 0.4],
+          startPositionMin: [-0.2, -0.2, -0.2],
+          startPositionMax: [0.2, 0.2, 0.2],
+          directionMin: [-1, -1, -1],
+          directionMax: [1, 1, 1],
+        },
+      });
+
+      scene.add(particles);
+      particles.start();
+
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        particles.update(clock.getDelta());
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    </script>
+  </body>
+</html>

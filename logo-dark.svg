@@ -1,0 +1,15 @@
+<svg width="220" height="40" viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="4" width="32" height="32" rx="8" fill="url(#bg)"/>
+  <circle cx="16" cy="20" r="4" fill="white"/>
+  <circle cx="16" cy="10" r="2.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="26" cy="20" r="2.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="16" cy="30" r="2.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="6" cy="20" r="2.5" fill="white" fill-opacity="0.6"/>
+  <text x="42" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#ffffff">threeparticles</text>
+</svg>

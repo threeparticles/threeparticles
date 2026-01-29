@@ -1,0 +1,50 @@
+{
+  "name": "@threeparticles/core",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/threeparticles.js",
+  "module": "./dist/threeparticles.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/threeparticles.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && vite build --config vite.config.min.ts && vite build --config vite.config.react.ts",
+    "build:watch": "vite build --watch",
+    "format": "prettier --write .",
+    "examples": "npx serve ."
+  },
+  "peerDependencies": {
+    "three": ">=0.160.0",
+    "react": ">=18.0.0",
+    "@react-three/fiber": ">=8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "@react-three/fiber": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@react-three/fiber": "^9.0.0",
+    "@types/react": "^19.0.0",
+    "@types/three": "^0.182.0",
+    "prettier": "^3.8.1",
+    "react": "^19.0.0",
+    "typescript": "^5",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
