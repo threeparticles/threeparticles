@@ -1,6 +1,6 @@
 {
   "name": "@threeparticles/core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://threeparticles.com",
   "type": "module",
   "main": "./dist/threeparticles.js",
