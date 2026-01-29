@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./logo-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./logo-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/threeparticles/threeparticles/refs/heads/main/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/threeparticles/threeparticles/refs/heads/main/logo-light.svg">
     <img src="./logo-light.svg" alt="threeparticles" height="40">
   </picture>
 </p>
