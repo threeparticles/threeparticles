@@ -30,7 +30,7 @@ Requires `three >= 0.160.0`
 ## Quick Start
 
 ```javascript
-import * as THREE from "three";
+import * as THREE from "three/webgpu";
 import { Particles } from "@threeparticles/core";
 
 // Create your Three.js scene
@@ -41,10 +41,11 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000,
 );
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGPURenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+await renderer.init();
 
 // Create particle system
 const particles = new Particles({
