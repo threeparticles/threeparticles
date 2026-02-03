@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/threeparticles/threeparticles"
+    "url": "git+https://github.com/threeparticles/threeparticles.git"
   },
   "exports": {
     ".": {
